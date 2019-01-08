@@ -66,3 +66,19 @@ suma = 0
 puts suma
 
 #Ejercicio 6
+multiplicacion = 1
+10.times { |i| multiplicacion *= i + 1 }
+puts multiplicacion
+
+#Ejercicio 7
+a = 10
+a.times { |i| puts (i + 1).even? ? 'par' : i }
+
+#Ejercicio 8
+a = ''
+10.times do |i|
+  (i + 1).even? i == 10 ? a += "#{i}par" : a += "#{i}par " : "#{i}impar "
+end
+puts a
+
+#Ejercicio 9
