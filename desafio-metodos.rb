@@ -33,12 +33,11 @@ def draw_line(size)
   '*' * size
 end
 
-def draw_lines(width, height)
-  height.times { puts draw_line(width) }
+def draw_lines(size)
+  size.times { puts draw_line(size) }
 end
 
-draw_lines(2, 10)
-
+draw_lines(5)
 
 #Ejercicio 7
 def search?(str, char)
