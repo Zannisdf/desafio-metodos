@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+  </head>
+  <body>
+    <button onclick="sortList()">Clasificar Arreglo</button>
+    <ul id="par">
+      <strong>Pares</strong>
+    </ul>
+    <ul id="impar">
+      <strong>Impares</strong>
+    </ul>
+    <ul id="string">
+      <strong>Strings</strong>
+    </ul>
+    <script>
+      var arr = [1,'dos','tres',4,5,6,'siete',8,9,'diez'],
+          str = document.getElementById('string'),
+          even = document.getElementById('par'),
+          odd = document.getElementById('impar');
+      function sortList(){
+        for(let i = 0; i < arr.length; i++){
+          text = document.createTextNode(arr[i]);
+          node = document.createElement('LI');
+          node.appendChild(text);
+          if(isNaN(arr[i])){
+            str.appendChild(node);
+          } else if(arr[i] % 2 === 0){
+            even.appendChild(node);
+          } else {
+            odd.appendChild(node);
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
